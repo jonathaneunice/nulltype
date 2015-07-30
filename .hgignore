@@ -1,6 +1,7 @@
 syntax: glob
 *.swp.{py,txt,html,css,js}
 *.pyc
+.git/*
 .tox
 .DS_Store
 build/*
