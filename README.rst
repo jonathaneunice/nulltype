@@ -175,13 +175,6 @@ Notes
     <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels`` because it
     is clearly Python 3 ready, includes a ``pickle`` mechanism.
 
- *  The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_ or
-    `@jeunice on Twitter <http://twitter.com/jeunice>`_
-    welcomes your comments and suggestions.
-
-Recent Changes
-==============
-
  *  Version 2.1.2 switches from BSD to Apache License 2.0 and integrates
     ``tox`` testing with ``setup.py``, and updates testing
     with Travis CI and pyroma.
@@ -205,9 +198,7 @@ Recent Changes
     Successfully packaged for, and
     tested against, all late-model versions of Python: 2.6, 2.7, 3.2, 3.3,
     3.4, and 3.5 pre-release (3.5.0b3) as well as PyPy 2.6.0 (based on
-    2.7.9) and PyPy3 2.4.0 (based on 3.2.5). Test line coverage ~100% for
-    ``intspan`` objects (not the much newer, more experimental
-    ``intspanlist`` features).
+    2.7.9) and PyPy3 2.4.0 (based on 3.2.5). 
 
  *  The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_ or
     `@jeunice on Twitter <http://twitter.com/jeunice>`_

@@ -34,7 +34,7 @@ def linelist(text):
 
 setup(
     name='nulltype',
-    version='2.1.2',
+    version='2.1.3',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
     description='Null values and sentinels like, but not, None',
