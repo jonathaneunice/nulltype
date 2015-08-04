@@ -1,14 +1,14 @@
 
-| |travisci| |version| |downloads| |supported-versions| |supported-implementations|
+| |travisci| |version| |downloads| |supported-versions| |supported-implementations| |wheel|
 
 .. |travisci| image:: https://api.travis-ci.org/jonathaneunice/nulltype.svg
     :target: http://travis-ci.org/jonathaneunice/nulltype
 
-.. |version| image:: http://img.shields.io/pypi/v/nulltype.png?style=flat
+.. |version| image:: http://img.shields.io/pypi/v/nulltype.svg?style=flat
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/nulltype
 
-.. |downloads| image:: http://img.shields.io/pypi/dm/nulltype.png?style=flat
+.. |downloads| image:: http://img.shields.io/pypi/dm/nulltype.svg?style=flat
     :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/nulltype
 
@@ -18,6 +18,10 @@
 
 .. |supported-implementations| image:: https://img.shields.io/pypi/implementation/nulltype.svg
     :alt: Supported implementations
+    :target: https://pypi.python.org/pypi/nulltype
+
+.. |wheel| image:: https://img.shields.io/pypi/wheel/nulltype.svg
+    :alt: Wheel packaging support
     :target: https://pypi.python.org/pypi/nulltype
 
 Helps define 'null' values and sentinels parallel to, but different from, ``None``.
@@ -171,9 +175,7 @@ roughly 0% of the time.
 Notes
 =====
 
- *  Similar modules include `sentinels <http://pypi.python.org/pypi/sentinels>`_ and `null
-    <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels`` because it
-    is clearly Python 3 ready, includes a ``pickle`` mechanism.
+ *  Version 2.1.4 adds wheel packaging.
 
  *  Version 2.1.2 switches from BSD to Apache License 2.0 and integrates
     ``tox`` testing with ``setup.py``, and updates testing
@@ -198,7 +200,11 @@ Notes
     Successfully packaged for, and
     tested against, all late-model versions of Python: 2.6, 2.7, 3.2, 3.3,
     3.4, and 3.5 pre-release (3.5.0b3) as well as PyPy 2.6.0 (based on
-    2.7.9) and PyPy3 2.4.0 (based on 3.2.5). 
+    2.7.9) and PyPy3 2.4.0 (based on 3.2.5).
+
+ *  Similar modules include `sentinels <http://pypi.python.org/pypi/sentinels>`_ and `null
+    <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels`` because it
+    is clearly Python 3 ready, includes a ``pickle`` mechanism.
 
  *  The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_ or
     `@jeunice on Twitter <http://twitter.com/jeunice>`_

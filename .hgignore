@@ -7,5 +7,4 @@ syntax: glob
 build/*
 dist/*
 *.egg-info
-setup.cfg
 PKG-INFO
