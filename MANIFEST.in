@@ -9,4 +9,4 @@ include setup.py
 include .gitignore
 include .hgignore
 include .travis.yml
-recursive-include test *
+recursive-include test *.py
