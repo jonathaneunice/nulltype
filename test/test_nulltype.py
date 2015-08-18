@@ -92,6 +92,6 @@ def test_set_name():
     Bozo = NullType("Bozo")
     assert str(Bozo) == "Bozo"
     Bozo.__name == "Bozo the Clown"
-    assert str(Bozo) == "Bozo the Clown"
+    assert str(Bozo) == "Bozo"
 
-    # Whether dynamc name setting makes sense... It probably doesn't.
+    # No name changes!

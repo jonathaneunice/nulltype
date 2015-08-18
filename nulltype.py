@@ -49,8 +49,7 @@ class NullType(object):
         pass
 
     def __setattr__(self, name, value):
-        if name == '__name':
-            object.__setattr__(self, name, value)
+        pass
 
     def __call__(self, *args, **kwargs):
         return self
@@ -101,8 +100,7 @@ class NonNullType(object):
         pass
 
     def __setattr__(self, name, value):
-        if name == '__name':
-            object.__setattr__(self, name, value)
+        pass
 
     def __call__(self, *args, **kwargs):
         return self
