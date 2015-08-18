@@ -12,6 +12,7 @@ Flubber = NonNullType("Flubber")
 
 nonnulls = [Extant, Something, Flubber]
 
+
 def test_doc_example():
     Full = NonNullType('Full')
 
@@ -22,21 +23,27 @@ def test_doc_example():
     assert Full[22] is Full
     assert Full("hey", 12) is Full
 
+
 def test_bool():
     for n in nonnulls:
         assert bool(n)
+
 
 def test_if():
     for n in nonnulls:
         if not n:
             assert False
 
+
 def test_getitem():
     assert Something[33] is Something
     assert Something["yo"] is Something
 
+
 def test_setitem():
-    pass
+    Flubber[33] = 1.134
+    assert Flubber[33] is Flubber
+
 
 def test_getattr():
     for nonnull in nonnulls:
@@ -45,6 +52,7 @@ def test_getattr():
         assert nonnull.attribute.other.another is nonnull
         assert nonnull.other.attribute.another is nonnull
         assert nonnull.another.attribute.other is nonnull
+
 
 def test_getattr_getitem():
     assert Something[12].something[33].lazy is Something
@@ -55,6 +63,7 @@ def test_getattr_getitem():
     assert alt.swedish.chef.bork.bork.bork is SwedishChef
     # tip of the hat to the Usenet of yore
 
+
 def test_setattr():
     for nonnull in nonnulls:
         attrs = getattr(nonnull, '__dict__')
@@ -63,12 +72,14 @@ def test_setattr():
         assert getattr(nonnull, '__dict__') == attrs
         # ie, after attribute changes, assert that none have chagned
 
+
 def test_iteration():
     for nonnull in nonnulls:
         assert len(nonnull) == 1
         assert list(nonnull) == [nonnull]
         for n in nonnull:
             assert n is nonnull
+
 
 def test_call():
     for nonnull in nonnulls:
@@ -77,7 +88,17 @@ def test_call():
         assert nonnull()["something"] is nonnull
         assert nonnull().something is nonnull
 
+
 def test_repr():
     names = ["Extant", "Something", "Flubber"]
     for nonnull, name in zip(nonnulls, names):
         assert repr(nonnull) == name
+
+
+def test_set_name():
+    Bozo = NonNullType("Bozo")
+    assert str(Bozo) == "Bozo"
+    Bozo.__name == "Bozo the Clown"
+    assert str(Bozo) == "Bozo the Clown"
+
+    # Whether dynamc name setting makes sense... It probably doesn't.

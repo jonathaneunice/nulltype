@@ -1,5 +1,5 @@
 
-| |travisci| |version| |downloads| |supported-versions| |supported-implementations| |wheel|
+| |travisci| |version| |downloads| |versions| |impls| |wheel| |coveage|
 
 .. |travisci| image:: https://api.travis-ci.org/jonathaneunice/nulltype.svg
     :target: http://travis-ci.org/jonathaneunice/nulltype
@@ -12,16 +12,20 @@
     :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/nulltype
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/nulltype.svg
+.. |versions| image:: https://img.shields.io/pypi/pyversions/nulltype.svg
     :alt: Supported versions
     :target: https://pypi.python.org/pypi/nulltype
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/nulltype.svg
+.. |impls| image:: https://img.shields.io/pypi/implementation/nulltype.svg
     :alt: Supported implementations
     :target: https://pypi.python.org/pypi/nulltype
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/nulltype.svg
     :alt: Wheel packaging support
+    :target: https://pypi.python.org/pypi/nulltype
+
+.. |coverage| image:: https://img.shields.io/badge/test_coverage-100%25-6600CC.svg
+    :alt: Test line coverage
     :target: https://pypi.python.org/pypi/nulltype
 
 Helps define 'null' values and sentinels parallel to, but different from, ``None``.
@@ -175,40 +179,45 @@ roughly 0% of the time.
 Notes
 =====
 
- *  Version 2.1.4 adds wheel packaging.
+* Version 2.2 inaugurates automated code coverage metrics. Test line coverage
+  100%. *Hooah!*
 
- *  Version 2.1.2 switches from BSD to Apache License 2.0 and integrates
-    ``tox`` testing with ``setup.py``, and updates testing
-    with Travis CI and pyroma.
+* Version 2.1.4 adds wheel packaging.
 
- *  Version 2.1 adds ``NonNullType``, an alternative for truthy sentinels.
-    (Most use cases should still use ``NullType``; "full" sentinels recommended
-    for odd cases only.)
+* Version 2.1.2 switches from BSD to Apache License 2.0 and integrates
+  ``tox`` testing with ``setup.py``, and updates testing
+  with Travis CI and pyroma.
 
- *  Version 2.0 starts major upgrade from just Boolean operations being nulled
-    to essentially all sorts of accesses and updates being nulled. It defines two
-    default ``NullType`` instances, ``Null`` and ``Nothing``. The ability
-    to have anonymous (unnamed) nulls has been removed as superfluous.
+* Version 2.1 adds ``NonNullType``, an alternative for truthy sentinels.
+  (Most use cases should still use ``NullType``; "full" sentinels recommended
+  for odd cases only.)
 
- *  Automated multi-version testing managed with `pytest
-    <http://pypi.python.org/pypi/pytest>`_, `pytest-cov
-    <http://pypi.python.org/pypi/pytest-cov>`_, and `tox
-    <http://pypi.python.org/pypi/tox>`_. Continuous integration testing
-    with `Travis-CI <https://travis-ci.org/jonathaneunice/intspan>`_.
-    Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
+* Version 2.0 starts major upgrade from just Boolean operations being nulled
+  to essentially all sorts of accesses and updates being nulled. It defines two
+  default ``NullType`` instances, ``Null`` and ``Nothing``. The ability
+  to have anonymous (unnamed) nulls has been removed as superfluous.
 
-    Successfully packaged for, and
-    tested against, all late-model versions of Python: 2.6, 2.7, 3.2, 3.3,
-    3.4, and 3.5 pre-release (3.5.0b3) as well as PyPy 2.6.0 (based on
-    2.7.9) and PyPy3 2.4.0 (based on 3.2.5).
+* Automated multi-version testing managed with `pytest
+  <http://pypi.python.org/pypi/pytest>`_, `pytest-cov
+  <http://pypi.python.org/pypi/pytest-cov>`_,
+  `coverage <https://pypi.python.org/pypi/coverage/4.0b1>`_
+  and `tox
+  <http://pypi.python.org/pypi/tox>`_. Continuous integration testing
+  with `Travis-CI <https://travis-ci.org/jonathaneunice/nulltype>`_.
+  Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
 
- *  Similar modules include `sentinels <http://pypi.python.org/pypi/sentinels>`_ and `null
-    <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels`` because it
-    is clearly Python 3 ready, includes a ``pickle`` mechanism.
+  Successfully packaged for, and
+  tested against, all late-model versions of Python: 2.6, 2.7, 3.2, 3.3,
+  3.4, and 3.5 pre-release (3.5.0b3) as well as PyPy 2.6.0 (based on
+  2.7.9) and PyPy3 2.4.0 (based on 3.2.5).
 
- *  The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_ or
-    `@jeunice on Twitter <http://twitter.com/jeunice>`_
-    welcomes your comments and suggestions.
+* Similar modules include `sentinels <http://pypi.python.org/pypi/sentinels>`_ and `null
+  <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels`` because it
+  is clearly Python 3 ready, includes a ``pickle`` mechanism.
+
+* The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_ or
+  `@jeunice on Twitter <http://twitter.com/jeunice>`_
+  welcomes your comments and suggestions.
 
 Installation
 ============

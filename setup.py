@@ -14,7 +14,7 @@ def lines(text):
 
 setup(
     name='nulltype',
-    version='2.1.5',
+    version='2.1.6',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
     description='Null values and sentinels like, but not, None',
@@ -22,9 +22,9 @@ setup(
     url='https://bitbucket.org/jeunice/nulltype',
     license='Apache License 2.0',
     py_modules=['nulltype'],
-	setup_requires=[],
+    setup_requires=[],
     install_requires=[],
-    tests_require=['tox', 'pytest'],
+    tests_require=['tox', 'pytest', 'pytest-cov', 'coverage'],
     test_suite="test",
     zip_safe=False,
     keywords='null none singleton sentinel',
