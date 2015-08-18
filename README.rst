@@ -1,5 +1,5 @@
 
-| |travisci| |version| |downloads| |versions| |impls| |wheel| |coveage|
+| |travisci| |version| |downloads| |versions| |impls| |wheel| |coverage|
 
 .. |travisci| image:: https://api.travis-ci.org/jonathaneunice/nulltype.svg
     :target: http://travis-ci.org/jonathaneunice/nulltype
