@@ -32,7 +32,8 @@
     :alt: Test line coverage
     :target: https://pypi.python.org/pypi/nulltype
 
-Helps define 'null' values and sentinels parallel to, but different from, ``None``.
+Helps define 'null' values and sentinels parallel to, but different from,
+Python built-ins such as ``None``, ``False``, and ``True``.
 
 ``None`` is a great `sentinel value <http://en.wikipedia.org/wiki/Sentinel_value>`_
 and a classic implementation of the
@@ -41,14 +42,19 @@ and a classic implementation of the
 But there are times that you need more than one nullish value to
 represent different aspects of emptiness. "Nothing there" is
 logically different from "undefined," "prohibited,"
-"end of data" and other kinds of null.
+"end of data" and other kinds of "null."
 
-The core function of ``nulltype``
-is representing emptiness and falsity in a way that doesn't overload ``None``
+``nulltype`` helps you easily represent different aspects of
+emptiness in a way that doesn't overload ``None``
 (or ``False``, ``0``, ``{}``, ``[]``, ``""``, or any of the other possible
 "there's nothing here!" values).
 It helps create designated identifiers with specific meanings
 such as ``Passthrough``, ``Prohibited``, and ``Undefined``.
+
+On the off chance that you need truish sentinels that aren't ``True``, it
+will help you do that too. And it will do so in an easily-consumed,
+right-off-the-shelf,
+fully-tested tested way.
 
 Usage
 =====
@@ -75,8 +81,8 @@ import a pre-constituted null value, such as::
 
     from nulltype import Nothing
 
-Dereferencing
-=============
+The Power of Nothing
+====================
 
 Alternate null types can be particularly useful when parsing
 data or traversing data structures which might or might not be
@@ -136,7 +142,7 @@ it's actually more general. Beyond different forms of 'null', ``NullType``
 instances are good general-purpose sentinels or designated values. Instead of
 the old::
 
-    class MySentinel(object):
+    class MySentinelClass(object):
         pass
 
 Use::
@@ -144,7 +150,13 @@ Use::
     MySentinel = NullType('MySentinel')
 
 That gives you a value with known truthiness properties and a nicer
-printed representation.
+printed representation.::
+
+    >>> print MySentinelClass               # fugly
+    <class '__main__.MySentinelClass'>
+
+    >>> print MySentinel                    # just right
+    MySentinel
 
 On the off chance you want a sentinel value that is
 `truthy <https://en.wikipedia.org/wiki/Truthiness>`_ rather than falsey /
@@ -180,6 +192,7 @@ The uniqueness of each singleton is currently not enforced, making it a usage
 convention rather than strict law. With even minimal care, this is a problem
 roughly 0% of the time.
 
+
 Notes
 =====
 
@@ -206,6 +219,7 @@ Notes
 * Similar modules include `sentinels <http://pypi.python.org/pypi/sentinels>`_ and `null
   <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels`` because it
   is clearly Python 3 ready, includes a ``pickle`` mechanism.
+  `noattr <https://pypi.python.org/pypi/noattr>`_ is a new alternative.
 
 * The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_ or
   `@jeunice on Twitter <http://twitter.com/jeunice>`_

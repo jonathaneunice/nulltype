@@ -17,7 +17,7 @@ setup(
     version='2.2.2',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
-    description='Null values and sentinels like, but not, None',
+    description='Null values and sentinels like (but not) None, False, and True',
     long_description=open('README.rst', encoding='utf-8').read(),
     url='https://bitbucket.org/jeunice/nulltype',
     license='Apache License 2.0',
@@ -27,7 +27,7 @@ setup(
     tests_require=['tox', 'pytest', 'pytest-cov', 'coverage'],
     test_suite="test",
     zip_safe=False,
-    keywords='null none singleton sentinel',
+    keywords='null none nothing False True singleton sentinel',
     classifiers=lines("""
         Development Status :: 5 - Production/Stable
         Operating System :: OS Independent

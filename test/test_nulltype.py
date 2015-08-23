@@ -18,6 +18,19 @@ def test_doc_example():
     assert Empty("hey", 12) is Empty
 
 
+def test_doc_repr_example():
+
+    class MySentinelClass(object):
+        pass
+
+    mscr = repr(MySentinelClass)
+    assert mscr.startswith("<class '")
+    assert mscr.endswith(".MySentinelClass'>")
+
+    MySentinel = NullType('MySentinel')
+    assert repr(MySentinel) == 'MySentinel'
+
+
 def test_bool():
     for n in nulls:
         assert not bool(n)

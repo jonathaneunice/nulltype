@@ -1,7 +1,8 @@
 include README.rst
+include CHANGES.yml
 include pytest.ini
 include tox.ini
+include toxcov.ini
 include nulltype.py
-include setup.py
 include .travis.yml
 recursive-include test *.py
