@@ -1,5 +1,5 @@
 
-| |travisci| |version| |downloads| |versions| |impls| |wheel| |coverage|
+| |travisci| |version| |downloads| |versions| |impls| |wheel| |coverage| |br-coverage|
 
 .. |travisci| image:: https://api.travis-ci.org/jonathaneunice/nulltype.svg
     :target: http://travis-ci.org/jonathaneunice/nulltype
@@ -25,6 +25,10 @@
     :target: https://pypi.python.org/pypi/nulltype
 
 .. |coverage| image:: https://img.shields.io/badge/test_coverage-100%25-6600CC.svg
+    :alt: Test line coverage
+    :target: https://pypi.python.org/pypi/nulltype
+
+.. |br-coverage| image:: https://img.shields.io/badge/branch_coverage-100%25-6600CC.svg
     :alt: Test line coverage
     :target: https://pypi.python.org/pypi/nulltype
 
@@ -179,23 +183,11 @@ roughly 0% of the time.
 Notes
 =====
 
-* Version 2.2 inaugurates automated code coverage metrics. Test line coverage
+* Version 2.2.2 completes automated code coverage metrics
+  with both line and brnach coverage at
   100%. *Hooah!*
 
-* Version 2.1.4 adds wheel packaging.
-
-* Version 2.1.2 switches from BSD to Apache License 2.0 and integrates
-  ``tox`` testing with ``setup.py``, and updates testing
-  with Travis CI and pyroma.
-
-* Version 2.1 adds ``NonNullType``, an alternative for truthy sentinels.
-  (Most use cases should still use ``NullType``; "full" sentinels recommended
-  for odd cases only.)
-
-* Version 2.0 starts major upgrade from just Boolean operations being nulled
-  to essentially all sorts of accesses and updates being nulled. It defines two
-  default ``NullType`` instances, ``Null`` and ``Nothing``. The ability
-  to have anonymous (unnamed) nulls has been removed as superfluous.
+* See ``CHANGES.yml`` for the full Change Log.
 
 * Automated multi-version testing managed with `pytest
   <http://pypi.python.org/pypi/pytest>`_, `pytest-cov
@@ -234,3 +226,12 @@ To ``easy_install`` under a specific Python version (3.3 in this example)::
 environments without super-user privileges, you may want to use ``pip``'s
 ``--user`` option, to install only for a single user, rather than
 system-wide.)
+
+Testing
+=======
+
+To run the module tests, use one of these commands::
+
+    tox                # normal run - speed optimized
+    tox -e py27        # run for a specific version only (e.g. py27, py34)
+    tox -c toxcov.ini  # run full coverage tests

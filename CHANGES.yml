@@ -1,0 +1,42 @@
+-
+    version: 2.2.2
+    date: August 23, 2015
+    notes: >
+        Institutes branch coverage testing with 100% coverage. *Hooah!*
+        
+        Updates testing rig. Adds true Change Log in ``CHANGES.yml``
+    
+-
+    version: 2.2.0
+    notes: >
+        Inaugurates automated code coverage metrics. Test line coverage
+        100%. *Hooah!*
+-
+    version: 2.1.4
+    date: null
+    notes: Adds wheel packaging.
+    
+-
+    version: 2.1.2
+    date: null
+    notes: >
+        Switches from BSD to Apache License 2.0 and integrates
+        ``tox`` testing with ``setup.py``, and updates testing
+        with Travis CI and pyroma.
+
+-
+    version: 2.1
+    date: null
+    notes: >
+        Adds ``NonNullType``, an alternative for truthy sentinels.
+        (Most use cases should still use ``NullType``; "full" sentinels recommended
+        for odd cases only.)
+
+-
+    version: 2.0.0
+    date: null
+    notes: >
+        Starts major upgrade from just Boolean operations being nulled
+        to essentially all sorts of accesses and updates being nulled. It defines two
+        default ``NullType`` instances, ``Null`` and ``Nothing``. The ability
+        to have anonymous (unnamed) nulls has been removed as superfluous.
