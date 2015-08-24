@@ -197,7 +197,7 @@ Notes
 =====
 
 * Version 2.2.2 completes automated code coverage metrics
-  with both line and brnach coverage at
+  with both line and branch coverage at
   100%. *Hooah!*
 
 * See ``CHANGES.yml`` for the full Change Log.
