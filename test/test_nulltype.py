@@ -1,5 +1,7 @@
 
 from nulltype import NullType, Nothing, Null
+import sys
+import re
 
 Prohibited = NullType("Prohibited")
 Transient  = NullType("Transient")
@@ -25,7 +27,10 @@ def test_doc_repr_example():
 
     mscr = repr(MySentinelClass)
     assert mscr.startswith("<class '")
-    assert mscr.endswith(".MySentinelClass'>")
+    if sys.version_info >= (3, 6):
+        assert re.search(r".MySentinelClass' at 0x[0-9a-f]+>", mscr, re.I)
+    else:
+        assert mscr.endswith(".MySentinelClass'>")
 
     MySentinel = NullType('MySentinel')
     assert repr(MySentinel) == 'MySentinel'
