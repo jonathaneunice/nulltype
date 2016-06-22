@@ -14,7 +14,7 @@ def lines(text):
 
 setup(
     name='nulltype',
-    version='2.2.4',
+    version='2.2.5',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
     description='Null values and sentinels like (but not) None, False, and True',
@@ -42,6 +42,7 @@ setup(
         Programming Language :: Python :: 3.3
         Programming Language :: Python :: 3.4
         Programming Language :: Python :: 3.5
+        Programming Language :: Python :: 3.6
         Programming Language :: Python :: Implementation :: CPython
         Programming Language :: Python :: Implementation :: PyPy
         Topic :: Software Development :: Libraries :: Python Modules

@@ -196,6 +196,9 @@ roughly 0% of the time.
 Notes
 =====
 
+* Version 2.2.5 updates testing for mid-2016 Python 
+  versions, including the new 3.6 alphas. 
+
 * Version 2.2.2 completes automated code coverage metrics
   with both line and branch coverage at
   100%. *Hooah!*

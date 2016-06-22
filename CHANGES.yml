@@ -1,9 +1,10 @@
 
 -
-    version: 2.2.3
-    date: August 23, 2015
+    version: 2.2.5
+    date: June 22, 2016
     notes: >
-        Improves docs. Extends tests.
+        Updates testing. Qualified under 2.7.11 and latest builds
+        of 3.3, 3.4, 3.5, and 3.6a2.
 
 -
     version: 2.2.2
