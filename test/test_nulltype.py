@@ -27,10 +27,7 @@ def test_doc_repr_example():
 
     mscr = repr(MySentinelClass)
     assert mscr.startswith("<class '")
-    if sys.version_info >= (3, 6):
-        assert re.search(r".MySentinelClass' at 0x[0-9a-f]+>", mscr, re.I)
-    else:
-        assert mscr.endswith(".MySentinelClass'>")
+    assert mscr.endswith(".MySentinelClass'>")
 
     MySentinel = NullType('MySentinel')
     assert repr(MySentinel) == 'MySentinel'
