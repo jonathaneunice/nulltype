@@ -196,14 +196,13 @@ roughly 0% of the time.
 Notes
 =====
 
-* Version 2.2.5 updates testing for mid-2016 Python 
-  versions, including the new 3.6 alphas. 
+* Version 2.2.6 updates testing for early 2017 Python
+  versions. Successfully packaged for, and
+  tested against, all late-model versions of Python: 2.6, 2.7, 3.3,
+  3.4, 3.5, and 3.6, as well as PyPy 5.6.0 (based on
+  2.7.12) and PyPy3 5.5.0 (based on 3.3.5).
 
-* Version 2.2.2 completes automated code coverage metrics
-  with both line and branch coverage at
-  100%. *Hooah!*
-
-* See ``CHANGES.yml`` for the full Change Log.
+* See ``CHANGES.yml`` for the complete Change Log.
 
 * Automated multi-version testing managed with `pytest
   <http://pypi.python.org/pypi/pytest>`_, `pytest-cov
@@ -213,11 +212,6 @@ Notes
   <http://pypi.python.org/pypi/tox>`_. Continuous integration testing
   with `Travis-CI <https://travis-ci.org/jonathaneunice/nulltype>`_.
   Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
-
-  Successfully packaged for, and
-  tested against, all late-model versions of Python: 2.6, 2.7, 3.2, 3.3,
-  3.4, and 3.5 pre-release (3.5.0b3) as well as PyPy 2.6.0 (based on
-  2.7.9) and PyPy3 2.4.0 (based on 3.2.5).
 
 * Similar modules include `sentinels <http://pypi.python.org/pypi/sentinels>`_ and `null
   <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels`` because it
@@ -235,11 +229,7 @@ To install or upgrade to the latest version::
 
     pip install -U nulltype
 
-To ``easy_install`` under a specific Python version (3.3 in this example)::
-
-    python3.3 -m easy_install nulltype
-
-(You may need to prefix these with ``sudo`` to authorize
+(You may need to prefix this with ``sudo`` to authorize
 installation. In environments without super-user privileges, you may want to
 use ``pip``'s ``--user`` option, to install only for a single user, rather
 than system-wide.)
