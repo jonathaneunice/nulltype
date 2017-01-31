@@ -1,5 +1,12 @@
 
 -
+    version: 2.2.9
+    date: January 31, 2017
+    notes: >
+        Updates testing matrix. Line and branch coverage
+        reconfirmed at 100%.
+        
+-
     version: 2.2.6
     date: January 23, 2017
     notes: >
