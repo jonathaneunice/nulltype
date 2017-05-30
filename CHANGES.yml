@@ -1,5 +1,13 @@
 
 -
+    version: 2.2.10
+    date: May 30, 2017
+    notes: >
+        Updated multi-Python version compatibility strategy.
+        Logical home is now Python 3, with Python 2 as the
+        outlier.  More future-proofed.
+        
+-
     version: 2.2.9
     date: January 31, 2017
     notes: >

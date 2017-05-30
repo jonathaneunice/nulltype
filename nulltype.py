@@ -1,6 +1,6 @@
 import sys
 
-_PY3 = sys.version_info[0] == 3
+_PY2 = sys.version_info[0] == 2
 
 
 class NullType(object):
@@ -23,13 +23,12 @@ class NullType(object):
     def __repr__(self):
         return object.__getattribute__(self, "__name")
 
-    if _PY3:
-        def __bool__(self):
+    if _PY2:  # PY2
+        def __nonzero__(self):
             """I am always False."""
             return False
-
-    else:  # PY2
-        def __nonzero__(self):
+    else: # PY3
+        def __bool__(self):
             """I am always False."""
             return False
 
@@ -73,13 +72,14 @@ class NonNullType(object):
     def __repr__(self):
         return object.__getattribute__(self, "__name")
 
-    if _PY3:
-        def __bool__(self):
+
+    if _PY2:
+        def __nonzero__(self):
             """I am always True."""
             return True
 
-    else:  # PY2
-        def __nonzero__(self):
+    else: # PY3
+        def __bool__(self):
             """I am always True."""
             return True
 

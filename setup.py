@@ -14,10 +14,10 @@ def lines(text):
 
 setup(
     name='nulltype',
-    version='2.2.9',
+    version='2.2.10',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
-    description='Null values and sentinels like (but not) None, False, and True',
+    description='Null values and sentinels like (but not) None, False & True',
     long_description=open('README.rst', encoding='utf-8').read(),
     url='https://bitbucket.org/jeunice/nulltype',
     license='Apache License 2.0',
