@@ -1,15 +1,11 @@
 
-| |travisci| |version| |downloads| |versions| |impls| |wheel| |coverage| |br-coverage|
+| |travisci| |version| |versions| |impls| |wheel| |coverage| |br-coverage|
 
 .. |travisci| image:: https://api.travis-ci.org/jonathaneunice/nulltype.svg
     :target: http://travis-ci.org/jonathaneunice/nulltype
 
 .. |version| image:: http://img.shields.io/pypi/v/nulltype.svg?style=flat
     :alt: PyPI Package latest release
-    :target: https://pypi.python.org/pypi/nulltype
-
-.. |downloads| image:: http://img.shields.io/pypi/dm/nulltype.svg?style=flat
-    :alt: PyPI Package monthly downloads
     :target: https://pypi.python.org/pypi/nulltype
 
 .. |versions| image:: https://img.shields.io/pypi/pyversions/nulltype.svg
@@ -196,11 +192,9 @@ roughly 0% of the time.
 Notes
 =====
 
-* Version 2.2.6 updates testing for early 2017 Python
-  versions. Successfully packaged for, and
+* Successfully packaged for, and
   tested against, all late-model versions of Python: 2.6, 2.7, 3.3,
-  3.4, 3.5, and 3.6, as well as PyPy 5.6.0 (based on
-  2.7.12) and PyPy3 5.5.0 (based on 3.3.5).
+  3.4, 3.5, and 3.6, as well as recent builds of PyPy and PyPy3. 
 
 * See ``CHANGES.yml`` for the complete Change Log.
 
@@ -214,9 +208,10 @@ Notes
   Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
 
 * Similar modules include `sentinels <http://pypi.python.org/pypi/sentinels>`_ and `null
-  <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels`` because it
-  is clearly Python 3 ready, includes a ``pickle`` mechanism.
-  `noattr <https://pypi.python.org/pypi/noattr>`_ is a new alternative.
+  <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels``
+  because it is clearly Python 3 ready, includes a ``pickle``
+  mechanism.  `noattr <https://pypi.python.org/pypi/noattr>`_ is a
+  new alternative.
 
 * The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_ or
   `@jeunice on Twitter <http://twitter.com/jeunice>`_
@@ -229,10 +224,12 @@ To install or upgrade to the latest version::
 
     pip install -U nulltype
 
-(You may need to prefix this with ``sudo`` to authorize
+You may need to prefix this with ``sudo`` to authorize
 installation. In environments without super-user privileges, you may want to
 use ``pip``'s ``--user`` option, to install only for a single user, rather
-than system-wide.)
+than system-wide.  On a system with multiple versions of Python, you 
+may also need to use specific ``pip3`` or ``pip2`` commands instead
+of the stock ``pip``.
 
 Testing
 =======
