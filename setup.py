@@ -14,7 +14,7 @@ def lines(text):
 
 setup(
     name='nulltype',
-    version='2.2.11',
+    version='2.3.0',
     author='Jonathan Eunice',
     author_email='jonathan.eunice@gmail.com',
     description='Null values and sentinels like (but not) None, False & True',
@@ -27,7 +27,7 @@ setup(
     tests_require=['tox', 'pytest', 'pytest-cov', 'coverage'],
     test_suite="test",
     zip_safe=False,
-    keywords='null none nothing False True singleton sentinel',
+    keywords='null none nothing Empty False True singleton sentinel',
     classifiers=lines("""
         Development Status :: 5 - Production/Stable
         Operating System :: OS Independent
@@ -42,6 +42,7 @@ setup(
         Programming Language :: Python :: 3.4
         Programming Language :: Python :: 3.5
         Programming Language :: Python :: 3.6
+        Programming Language :: Python :: 3.7
         Programming Language :: Python :: Implementation :: CPython
         Programming Language :: Python :: Implementation :: PyPy
         Topic :: Software Development :: Libraries :: Python Modules

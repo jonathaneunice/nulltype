@@ -1,19 +1,26 @@
 
 -
+    version: 2.3.0
+    date: June 2, 2018
+    notes: >
+        Added ``Empty`` as an auto-exported instance. Updated
+        testing matrix and tweaked docs and testing accordingly.
+
+-
     version: 2.2.10
     date: May 30, 2017
     notes: >
         Updated multi-Python version compatibility strategy.
         Logical home is now Python 3, with Python 2 as the
         outlier.  More future-proofed.
-        
+
 -
     version: 2.2.9
     date: January 31, 2017
     notes: >
         Updates testing matrix. Line and branch coverage
         reconfirmed at 100%.
-        
+
 -
     version: 2.2.6
     date: January 23, 2017
@@ -33,9 +40,9 @@
     date: August 23, 2015
     notes: >
         Institutes branch coverage testing with 100% coverage. *Hooah!*
-        
+
         Updates testing rig. Adds true Change Log in ``CHANGES.yml``
-    
+
 -
     version: 2.2.0
     notes: >
@@ -45,7 +52,7 @@
     version: 2.1.4
     date: null
     notes: Adds wheel packaging.
-    
+
 -
     version: 2.1.2
     date: null

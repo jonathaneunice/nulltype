@@ -1,23 +1,25 @@
 
-from nulltype import NullType, Nothing, Null
+from nulltype import NullType, Nothing, Null, Empty
 import sys
 import re
 
+# create new NullType instances for testing
 Prohibited = NullType("Prohibited")
 Transient  = NullType("Transient")
 
-nulls = [Prohibited, Transient, Nothing, Null]
+nulls = [Prohibited, Transient, Nothing, Null, Empty]
 
 
 def test_doc_example():
-    Empty = NullType('Empty')
+    Void = NullType('Void')
 
-    assert bool(Empty) == False
-    assert len(Empty) == 0
-    assert list(Empty) == []
-    assert Empty.some_attribute is Empty
-    assert Empty[22] is Empty
-    assert Empty("hey", 12) is Empty
+    assert bool(Void) == False
+    assert len(Void) == 0
+    assert list(Void) == []
+    assert Void.some_attribute is Void
+    assert Void[22] is Void
+    assert Void("hey", 12) is Void
+    assert repr(Void) == 'Void'
 
 
 def test_doc_repr_example():
@@ -86,7 +88,7 @@ def test_iteration():
         assert len(null) == 0
         assert list(null) == []
         for n in null:
-            assert False
+            assert False # must / should never be called
 
 
 def test_call():
@@ -98,9 +100,10 @@ def test_call():
 
 
 def test_repr():
-    names = ["Prohibited", "Transient", "Nothing"]
+    names = ["Prohibited", "Transient", "Nothing", "Null", "Empty"]
     for null, name in zip(nulls, names):
         assert repr(null) == name
+        assert str(null) == name
 
 
 def test_set_name():

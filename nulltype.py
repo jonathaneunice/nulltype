@@ -2,6 +2,8 @@ import sys
 
 _PY2 = sys.version_info[0] == 2
 
+__all__ = "NullType NonNullType Null Nothing Empty".split()
+
 
 class NullType(object):
 
@@ -56,6 +58,7 @@ class NullType(object):
 
 Null = NullType('Null')
 Nothing = NullType('Nothing')
+Empty = NullType('Empty')
 
 
 class NonNullType(object):

@@ -35,22 +35,19 @@ Python built-ins such as ``None``, ``False``, and ``True``.
 and a classic implementation of the
 `null object pattern <http://en.wikipedia.org/wiki/Null_Object_pattern>`_.
 
-But there are times that you need more than one nullish value to
-represent different aspects of emptiness. "Nothing there" is
-logically different from "undefined," "prohibited,"
-"end of data" and other kinds of "null."
+But there are times that you need more than one nullish value to represent
+different aspects of emptiness. "Nothing there" is logically different from
+"undefined," "prohibited," "end of data," and other kinds of "null."
 
-``nulltype`` helps you easily represent different aspects of
-emptiness in a way that doesn't overload ``None``
-(or ``False``, ``0``, ``{}``, ``[]``, ``""``, or any of the other possible
-"there's nothing here!" values).
-It helps create designated identifiers with specific meanings
-such as ``Passthrough``, ``Prohibited``, and ``Undefined``.
+``nulltype`` helps you easily represent different aspects of emptiness in a way
+that doesn't overload ``None`` (or ``False``, ``0``, ``{}``, ``[]``, ``""``, or
+any of the other possible "there's nothing here!" values). It helps create
+designated identifiers with specific meanings such as ``Passthrough``,
+``Prohibited``, and ``Undefined``.
 
-On the off chance that you need truish sentinels that aren't ``True``, it
-will help you do that too. And it will do so in an easily-consumed,
-right-off-the-shelf,
-fully-tested tested way.
+On the off chance that you need truish sentinels that aren't ``True``, it will
+help you do that too. And it will do so in an easily-consumed,
+right-off-the-shelf, fully-tested tested way.
 
 Usage
 =====
@@ -59,23 +56,22 @@ Usage
 
     from nulltype import NullType
 
-    Empty = NullType('Empty')
+    Void = NullType('Void')
 
     # following just to show it's working
-    assert bool(Empty) == False
-    assert len(Empty) == 0
-    assert list(Empty) == []
-    assert Empty.some_attribute is Empty
-    assert Empty[22] is Nothing
-    assert Empty("hey", 12) is Empty
+    assert bool(Void) == False
+    assert len(EmpVoidty) == 0
+    assert list(Void) == []
+    assert Void.some_attribute is Empty
+    assert Void[22] is Nothing
+    assert Void("hey", 12) is Empty
 
-You can create as many custom ``NullType``
-values as you like. For your convenience, two default
-values, ``Null`` and ``Nothing``, are exported. That way,
-if you don't really want to create your own, you can
-import a pre-constituted null value, such as::
+You can create as many custom ``NullType`` values as you like. For your
+convenience, several default values, ``Empty``, ``Null``, and ``Nothing``, are
+exported. That way, if you don't really want to create your own, you can easily
+import a pre-constituted null value::
 
-    from nulltype import Nothing
+    from nulltype import Empty
 
 The Power of Nothing
 ====================
@@ -108,16 +104,13 @@ constructs are deeply nested when dealing with API results, XML parse trees,
 and other fundamentally nested information sources. Saving a guard condition
 on every one of the nesting levels adds up quickly.
 
-While you could almost do this in stock Python, unlike ``Nothing``, ``None``
-is not iterable. You might use an empty list ``[]`` (or an equivalent global
-such as ``EMPTYLIST``) as the alternative value for the
-``get`` method.
-Going by the documentation of many parsers and
-APIs, however, such uses aren't
-broadly idiomatic in today's Python community.
-The ``EMPTYLIST`` approach also is very specific to routines
-returning lists, whereas the "go ahead, get it if you can" ``nulltype``
-model works well for longer chains of access::
+While you could almost do this in stock Python, unlike ``Nothing``, ``None`` is
+not iterable. You might use an empty list ``[]`` (or an equivalent global such
+as ``EMPTYLIST``) as the alternative value for the ``get`` method. Going by the
+documentation of many parsers and APIs, however, such uses aren't broadly
+idiomatic in today's Python community. The ``EMPTYLIST`` approach also is very
+specific to routines returning lists, whereas the "go ahead, get it if you can"
+``nulltype`` model works well for longer chains of access::
 
     results.get("payload", Nothing).get("headers", Nothing)
 
@@ -171,18 +164,19 @@ almost the exact same way, but that evaluates as true.::
     assert Full("hey", 12) is Full
 
 Experience suggests that nullish sentinels are generally adequate and
-preferable. And the "everything folds back to the same value" nature of
-even ``NonNullType`` gives a somewhat null-like, or at least
-non-reactive, nature. But if you do want a true-ish sentinel, there it is.
+preferable. And the "everything folds back to the same value" nature of even
+``NonNullType`` gives a somewhat null-like, or at least non-reactive, nature.
+But if you do want a true-ish sentinel, there it is.
+
 
 Uniqueness
 ==========
 
-``NullType`` instances are meant to be
-`singletons <http://en.wikipedia.org/wiki/Singleton_pattern>`_, with just one per
-program. They almost are, though technically multiple ``NullType`` instances are
-reasonable, making it more of a `multiton
-pattern <http://en.wikipedia.org/wiki/Multiton_pattern>`_.
+``NullType`` instances are meant to be `singletons
+<http://en.wikipedia.org/wiki/Singleton_pattern>`_, with just one per program.
+They almost are, though technically multiple ``NullType`` instances are
+reasonable, making it more of a `multiton pattern
+<http://en.wikipedia.org/wiki/Multiton_pattern>`_.
 
 The uniqueness of each singleton is currently not enforced, making it a usage
 convention rather than strict law. With even minimal care, this is a problem
@@ -194,7 +188,7 @@ Notes
 
 * Successfully packaged for, and
   tested against, all late-model versions of Python: 2.6, 2.7, 3.3,
-  3.4, 3.5, and 3.6, as well as recent builds of PyPy and PyPy3. 
+  3.4, 3.5, 3.6, and 3.7 pre-release, as well as recent builds of PyPy and PyPy3. 
 
 * See ``CHANGES.yml`` for the complete Change Log.
 
@@ -224,12 +218,16 @@ To install or upgrade to the latest version::
 
     pip install -U nulltype
 
-You may need to prefix this with ``sudo`` to authorize
-installation. In environments without super-user privileges, you may want to
-use ``pip``'s ``--user`` option, to install only for a single user, rather
-than system-wide.  On a system with multiple versions of Python, you 
-may also need to use specific ``pip3`` or ``pip2`` commands instead
-of the stock ``pip``.
+You may need to prefix this with ``sudo`` to authorize installation on Unix,
+Linux, and macOS. In environments without super-user privileges, you may want
+to use ``pip``'s ``--user`` option, to install only for a single user, rather
+than system-wide. On a system with multiple versions of Python, you may also
+need to use specific ``pip3`` or ``pip2`` commands instead of the stock
+``pip``. As a backup, running pip as a Python module can save your sanity in
+complex cases where ``pip`` versions aren't working well as standalone
+commands::
+
+    python3.6 -m pip install -U nulltye
 
 Testing
 =======

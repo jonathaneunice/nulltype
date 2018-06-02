@@ -9,3 +9,4 @@ dist/
 docs/_build/
 *.egg-info
 *.ipynb
+.pytest_cache
