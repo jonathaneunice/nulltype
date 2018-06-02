@@ -227,7 +227,7 @@ need to use specific ``pip3`` or ``pip2`` commands instead of the stock
 complex cases where ``pip`` versions aren't working well as standalone
 commands::
 
-    python3.6 -m pip install -U nulltye
+    python3.6 -m pip install -U nulltype
 
 Testing
 =======
