@@ -6,27 +6,27 @@
 
 .. |version| image:: http://img.shields.io/pypi/v/nulltype.svg?style=flat
     :alt: PyPI Package latest release
-    :target: https://pypi.python.org/pypi/nulltype
+    :target: https://pypi.org/project/nulltype
 
 .. |versions| image:: https://img.shields.io/pypi/pyversions/nulltype.svg
     :alt: Supported versions
-    :target: https://pypi.python.org/pypi/nulltype
+    :target: https://pypi.org/project/nulltype
 
 .. |impls| image:: https://img.shields.io/pypi/implementation/nulltype.svg
     :alt: Supported implementations
-    :target: https://pypi.python.org/pypi/nulltype
+    :target: https://pypi.org/project/nulltype
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/nulltype.svg
     :alt: Wheel packaging support
-    :target: https://pypi.python.org/pypi/nulltype
+    :target: https://pypi.org/project/nulltype
 
 .. |coverage| image:: https://img.shields.io/badge/test_coverage-100%25-6600CC.svg
     :alt: Test line coverage
-    :target: https://pypi.python.org/pypi/nulltype
+    :target: https://pypi.org/project/nulltype
 
 .. |br-coverage| image:: https://img.shields.io/badge/branch_coverage-100%25-6600CC.svg
     :alt: Test branch coverage
-    :target: https://pypi.python.org/pypi/nulltype
+    :target: https://pypi.org/project/nulltype
 
 Helps define 'null' values and sentinels parallel to, but different from,
 Python built-ins such as ``None``, ``False``, and ``True``.
@@ -66,10 +66,10 @@ Usage
     assert Void[22] is Nothing
     assert Void("hey", 12) is Empty
 
-You can create as many custom ``NullType`` values as you like. For your
-convenience, several default values, ``Empty``, ``Null``, and ``Nothing``, are
-exported. That way, if you don't really want to create your own, you can easily
-import a pre-constituted null value::
+You can create as many custom null values as you like. For convenience, several
+default values, ``Empty``, ``Null``, and ``Nothing``, are exported. That way,
+if you don't really want to create your own, you can easily import a
+pre-constituted null value::
 
     from nulltype import Empty
 
@@ -201,14 +201,18 @@ Notes
   with `Travis-CI <https://travis-ci.org/jonathaneunice/nulltype>`_.
   Packaging linting with `pyroma <https://pypi.python.org/pypi/pyroma>`_.
 
-* Similar modules include `sentinels <http://pypi.python.org/pypi/sentinels>`_ and `null
-  <http://pypi.python.org/pypi/null>`_. Of these, I prefer ``sentinels``
+* Similar modules include `sentinels <http://pypi.org/project/sentinels>`_ and `null
+  <http://pypi.org/project/null>`_. Of these, I prefer ``sentinels``
   because it is clearly Python 3 ready, includes a ``pickle``
-  mechanism.  `noattr <https://pypi.python.org/pypi/noattr>`_ is a
+  mechanism.  `noattr <https://pypi.org/project/noattr>`_ is a
   new alternative.
 
+* For a module that uses the null value ``Empty`` to make the parsing of 
+  JSON and other data formats easier, see 
+  `items <https://pypi.org/project/items>`_ 
+
 * The author, `Jonathan Eunice <mailto:jonathan.eunice@gmail.com>`_ or
-  `@jeunice on Twitter <http://twitter.com/jeunice>`_
+  `@jeunice on Twitter <http://twitter.com/jeunice>`_,
   welcomes your comments and suggestions.
 
 Installation
